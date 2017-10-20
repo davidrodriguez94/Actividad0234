@@ -9,7 +9,7 @@
  * @author David J. Barnes and Michael KÃ¶lling
  * @version 2016.02.29
  */
-public class TicketMachine
+  public class TicketMachine
 {
     // The price of a ticket from this machine.
     private int price;
@@ -17,6 +17,7 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -75,4 +76,53 @@ public class TicketMachine
         // Clear the balance.
         balance = 0;
     }
+    
+    /**
+     * Devuelve el valor del campo total
+     */
+    public int getTotal()
+    {
+        return total;
+    }
+    
+    /**
+     * Permite cambiar e lvalor del precio
+     */
+    public void setPrice(int cost)
+    {
+        price = cost;
+    }
+    
+    /**
+     * Permite incrementar el precio del billete en 2 euros
+     */
+    public void subirPrecioEn2Euros()
+    {
+        price = price + 200;
+    }
+    
+    /**
+     * Reducir el precio del billete en la cantidad que se pasa como parámetro
+     */
+    public void discount (int amount)
+    {
+        amount = price - amount;
+    }
+    
+    /**
+     * Saca un mensaje por pantalla
+     */
+    public void prompt()
+    {
+        System.out.println("Inserta la cantidad correcta de dinero");
+    }
+    
+    /**
+     * Imprime por pantalla el precio del billete
+     */
+    public void showPrice()
+    {
+        System.out.println("El precio del billete es " + price + "céntimos.");
+    }
+    
 }
