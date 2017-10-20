@@ -134,4 +134,11 @@
         System.out.println("El precio del billete es " + price + "céntimos.");
     }
     
+    /**
+     * Extrae el dinero de la máquina
+     */
+    public void vaciar()
+    {
+        total = 0;
+    }
 }
